@@ -7,7 +7,7 @@ const LoginScreen = () => {
     return (
         <View>
             <StatusBar style="light" />
-            <Text>This is the Login Screen</Text>
+            <Image source={require("../assets/signal-logo.png")} style={{ width: 100, height: 100 }} />
         </View>
     )
 }
