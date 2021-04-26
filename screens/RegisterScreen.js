@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'react-native';
 import { KeyboardAvoidingView } from 'react-native';
-import { Button, Input } from "react-native-elements";
+import { Button, Input, Text } from "react-native-elements";
 
 
 const RegisterScreen = ({ navigation }) => {
@@ -51,11 +51,26 @@ const RegisterScreen = ({ navigation }) => {
                     onSubmitEditing={register}
                 />
             </View>
-            <Button onPress={register} title="Register" />
+            <Button
+                containerStyle={styles.button}
+                raised
+                onPress={register}
+                title="Register"
+            />
+            <View style={{ height: 100 }} />
         </KeyboardAvoidingView>
     )
 }
 
 export default RegisterScreen;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 10,
+        backgroundColor: "white",
+    },
+    button: {},
+});
