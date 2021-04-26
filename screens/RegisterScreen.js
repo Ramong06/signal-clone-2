@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const RegisterScreen = () => {
+const RegisterScreen = ({ navigation }) => {
     return (
         <View>
             <Text>I Am THE REGISTER SCREEN!</Text>
