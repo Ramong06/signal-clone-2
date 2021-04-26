@@ -4,8 +4,12 @@ import { Button, Input, Image } from "react-native-elements";
 import { StatusBar } from "expo-status-bar";
 
 const LoginScreen = () => {
-    const [email, setEmail] = useState(" ");
-    const [password, setPassword] = useState(" ");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const signIn = () => {
+
+    };
 
     return (
         <View>
@@ -33,7 +37,8 @@ const LoginScreen = () => {
                     onChangeText={(text) => setPassword(text)}
                 />
             </View>
-            <Button title="Login" />
+            <Button containerStyle={styles.button} onPress={signIn} title="Login" />
+            <Button containerStyle={styles.button} type="outline" title="Register" />
         </View>
     )
 }
@@ -44,4 +49,5 @@ const styles = StyleSheet.create({
     inputContainer: {
 
     },
+    button: {},
 })
