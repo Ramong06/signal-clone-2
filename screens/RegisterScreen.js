@@ -1,11 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar } from 'react-native';
+import { KeyboardAvoidingView } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 const RegisterScreen = ({ navigation }) => {
     return (
-        <View>
+        <KeyboardAvoidingView behavior="padding" style={styles.container}>
+            <StatusBar style="light" />
             <Text>I Am THE REGISTER SCREEN!</Text>
-        </View>
+        </KeyboardAvoidingView>
     )
 }
 
