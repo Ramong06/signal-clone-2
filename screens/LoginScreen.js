@@ -12,7 +12,7 @@ const LoginScreen = () => {
     };
 
     return (
-        <View>
+        <View style={styles.container}>
                 <StatusBar style="light" />
                 <Image
                     source={{
@@ -46,8 +46,13 @@ const LoginScreen = () => {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
-    inputContainer: {
-
+    container: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        padding: 10,
+        backgroundColor: "white",
     },
+    inputContainer: {},
     button: {},
 })
