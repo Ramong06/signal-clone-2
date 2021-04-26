@@ -51,6 +51,7 @@ const RegisterScreen = ({ navigation }) => {
                     onSubmitEditing={register}
                 />
             </View>
+            <Button onPress={register} title="Register" />
         </KeyboardAvoidingView>
     )
 }
