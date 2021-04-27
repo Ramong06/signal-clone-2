@@ -25,4 +25,12 @@ if (firebase.apps.length === 0) {
 } else {
   // changes app variable to initialized firebase app
   app = firebase.app();
-}
+};
+
+// sets up database access variable
+const db = app.firestore();
+// sets up authentication access variable
+const auth = firebase.auth();
+
+// exports variable to be used in different components/screens
+export { db, auth };
