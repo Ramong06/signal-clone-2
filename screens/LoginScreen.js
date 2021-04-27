@@ -12,11 +12,13 @@ const LoginScreen = ({ navigation }) => {
 
     // Checks if the user is Authenticated, if authenticated then the app will replace the screen with Home screen.
     useEffect(() => {
-        auth.onAuthStateChanged((authUser) => {
+        const unsubscribe = auth.onAuthStateChanged((authUser) => {
             if (authUser) {
                 navigation.replace("Home");
             }
-        })
+        });
+        
+        return unsubscribe;
     }, []);
 
     const signIn = () => {
