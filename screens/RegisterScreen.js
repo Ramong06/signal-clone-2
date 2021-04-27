@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'react-native';
 import { KeyboardAvoidingView } from 'react-native';
@@ -11,6 +11,12 @@ const RegisterScreen = ({ navigation }) => {
     const [password, setPassword] = useState("");
     const [imageUrl, setImageUrl] = useState("");
 
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            headerBackTitle: "Back to Login",
+        })
+    }, [navigation])
+
     const register = () => {
 
     };
@@ -19,7 +25,7 @@ const RegisterScreen = ({ navigation }) => {
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
             <StatusBar style="light" />
             <Text h3 style={{ marginBottom: 50 }}>
-                Create A Signal Account
+                Create An Account
             </Text>
 
             <View style={styles.inputContainer}>
