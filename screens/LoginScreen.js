@@ -1,13 +1,23 @@
-import React, { useState }from 'react';
+import React, { useEffect, useState }from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Input, Image } from "react-native-elements";
 import { KeyboardAvoidingView } from "react-native";
 import { StatusBar } from "expo-status-bar";
+import { auth } from '../firebase';
 
 
 const LoginScreen = ({ navigation }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    // Checks if the user is Authenticated, if authenticated then the app will replace the screen with Home screen.
+    useEffect(() => {
+        auth.onAuthStateChanged((authUser) => {
+            if (authUser) {
+                navigation.replace("Home");
+            }
+        })
+    }, []);
 
     const signIn = () => {
 
