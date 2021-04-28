@@ -16,6 +16,16 @@ const CustomListItem = () => {
                 <ListItem.Title style={{ fontWeight: "800" }}>
                     THE CHAT WILL GO HERE!
                 </ListItem.Title>
+                <ListItem.Subtitle numberOfLines={1} ellipsizeMode="tail">
+                    This is a test
+                    This is a test
+                    This is a test
+                    This is a test
+                    This is a test
+                    This is a test
+                    This is a test
+                    This is a test
+                </ListItem.Subtitle>
             </ListItem.Content>
         </ListItem>
     )
