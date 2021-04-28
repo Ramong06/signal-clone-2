@@ -6,7 +6,7 @@ const HomeScreen = () => {
     return (
         <SafeAreaView>
             <ScrollView>
-
+                
             </ScrollView>
         </SafeAreaView>
     )
