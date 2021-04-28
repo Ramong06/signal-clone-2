@@ -17,13 +17,11 @@ const LoginScreen = ({ navigation }) => {
                 navigation.replace("Home");
             }
         });
-        
+
         return unsubscribe;
     }, []);
 
-    const signIn = () => {
-
-    };
+    const signIn = () => {};
 
     return (
         <KeyboardAvoidingView behavior="padding" style={styles.container}>
