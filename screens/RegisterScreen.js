@@ -23,10 +23,11 @@ const RegisterScreen = ({ navigation }) => {
         auth.createUserWithEmailAndPassword(email, password)
             // Authenticated User Object returned from ^ auth.createUserWithEmailAndPassword(email, password)
             .then(authUser => {
-                authUser.user.update({
+                authUser.user.updateProfile({
                     displayName: name,
                     // URL on photoURL must be all caps for firebase
-                    photoURL: imageUrl || "https://cdn.shopify.com/s/files/1/0030/4227/9494/products/mgs-solid-snake-tubbz-gs-04_800x.progressive.jpg?v=1611082441"
+                    photoURL: imageUrl ||
+                        "https://cdn.shopify.com/s/files/1/0030/4227/9494/products/mgs-solid-snake-tubbz-gs-04_800x.progressive.jpg?v=1611082441"
                 })
             })
             // In case there is an error running auth.createUserWithEmailAndPassword this will return and error
