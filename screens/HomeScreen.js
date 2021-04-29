@@ -8,6 +8,8 @@ const HomeScreen = ({ navigation }) => {
     useLayoutEffect(() => {
         navigation.setOptions({
             title: "Signal",
+            headerStyle: { backgroundColor: "#fff" },
+            headerTitleStyle: { color: "black" },
         });
     }, []);
 
