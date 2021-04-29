@@ -3,7 +3,7 @@ import { ScrollView, SafeAreaView } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
 import { Avatar } from "react-native-elements";
 import CustomListItem from '../components/CustomListItem';
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";
 
 const HomeScreen = ({ navigation }) => {
 
