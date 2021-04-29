@@ -1,5 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 import { ScrollView, SafeAreaView } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { StyleSheet, Text, View } from 'react-native';
 import { Avatar } from "react-native-elements";
 import CustomListItem from '../components/CustomListItem';
@@ -14,7 +15,9 @@ const HomeScreen = ({ navigation }) => {
             headerTitleStyle: { color: "black" },
             headerTintColor: "black",
             headerLeft: () => <View style={{ marginLeft: 20 }}>
-                <Avatar rounded source={{ uri: auth?.currentUser?.photoURL }} />
+                <TouchableOpacity>
+                    <Avatar rounded source={{ uri: auth?.currentUser?.photoURL }} />
+                </TouchableOpacity>
             </View>
         });
     }, []);
